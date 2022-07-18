@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+html{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: Inter,sans-seif;
+    background-color: #23252c;
+}
+
+.container{
+    width: 550px;
+    height: 853px;
+    background-color: #FFFFFF;
+    margin: 0 35%;
+}
+
+.nav{
+    height: 8.2%;
+    font-family: sans-serif;
+    color: rgb(214, 68, 68);
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 2.98256px 7.4564px rgba(0, 0, 0, 0.1);
+}
+.airbnb--logo{
+    color: rgb(214, 68, 68);
+    padding-left: 3%;
+}
+.airbnb{
+    margin-left: 3px;
+}
+
+.intro{
+    padding: 20px;
+}
+.intro--image{
+    width: 395px;
+    height: 232px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.online{
+    font-family: 'Poppins';
+    font-size: 36px;
+    color: #000000;
+    text-align: left;
+    margin-bottom: 0;
+}
+
+.para{
+    color: #222222;
+    text-align: left;
+    width: 320px;
+}
+
+.card{
+    padding-left: 20px;
+    position: relative;
+}
+.card--katie{
+    width: 176px;
+    height: 235px;
+    border-radius: 10px;
+}
+
+.card--soldout{
+    position: absolute;
+    border-radius: 2px;
+    padding: 2px;
+    font-size: 0.7rem;
+    background-color: #FFFFFF;
+    text-transform: uppercase;
+    top: 1px;
+    left: 5%;
+}
+
+.star--logo{
+    display: flex;
+    align-items: center;
+    margin-left: 2px;
+    margin-top: 5px;
+}
+
+.star--logo>i{
+    color: red;
+    margin-right: 2px;
+}
+
+.card--lessons{
+    font-size: 0.7rem;
+}
+.card--price{
+    font-size: 0.8rem;
+}
