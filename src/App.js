@@ -1,21 +1,31 @@
-import Header from "./components/Header"
-import Card from "./components/Card"
-import data from "./data"
+import Intro from "./components/Intro";
+import Main from "./components/Main";
+import React from "react";
 
 export default function App(){
-    const cards = data.map((item)=>{
-        return(
-            <Card>
-                item = {item}
-            </Card>
-        )
-    })
+
+    const [startQuiz,setStartQuiz] = React.useState(false) //Intro page login
+    const [playAgain,setPlayAgain] = React.useState(false) //playAgain
+
+    function handleStartQuiz(){
+        setStartQuiz(true)
+        setPlayAgain(false)
+    }
+
+    function handlePlayAgain(){
+        setPlayAgain(true)
+        setStartQuiz(false)
+    }
+    
     return(
-        <div className="container">
-            <Header></Header>
-            <section className="card--list">
-                {cards}
-            </section>
+        <div className="app">
+            {!startQuiz && <Intro start={handleStartQuiz}></Intro>}
+            {startQuiz && !playAgain && <Main 
+                                            playAgain = {playAgain}
+                                            replayFn = {handlePlayAgain}
+                                        >
+                                        </Main>}
+
         </div>
     )
 }

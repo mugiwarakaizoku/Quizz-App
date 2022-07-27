@@ -1,98 +1,145 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+:root{
+    --buttonColor : white
+}
+
 html{
     box-sizing: border-box;
 }
 
 body{
     margin: 0;
-    font-family: Inter,sans-seif;
-    background-color: #23252c;
-}
-
-.container{
-    width: 550px;
-    height: 853px;
-    background-color: #FFFFFF;
-    margin: 0 35%;
-}
-
-.nav{
-    height: 8.2%;
-    font-family: sans-serif;
-    color: rgb(214, 68, 68);
+    height: 100vh;
     display: flex;
+    justify-content: center;
     align-items: center;
-    box-shadow: 0px 2.98256px 7.4564px rgba(0, 0, 0, 0.1);
 }
-.airbnb--logo{
-    color: rgb(214, 68, 68);
-    padding-left: 3%;
-}
-.airbnb{
-    margin-left: 3px;
+
+.app{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .intro{
-    padding: 20px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
-.intro--image{
-    width: 395px;
-    height: 232px;
-    display: block;
+
+.intro--title{
+    color: #293264;
+    margin: 0;
+}
+
+.intro--button{
+    width: 193px;
+    height: 52px;
+    border: 0;
+    background-color: #4D5B9E;
+    color: #F5F7FB;
+    font-size: 1.2rem;
+    padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.question{
+    font-family: sans-serif;
+    color: #293264;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.option-button{
+    min-width:fit-content;
+    height: 20.65px;
+    text-align: center;
+    padding: 0 15px;
+    border: 0;
+    cursor: pointer;
+    color: #293264;
+    border: 1px solid #4D5B9E;
+    border-radius: 20px;
+    background-color: var(--buttonColor);
+}
+
+.clicked-option{
+    min-width:fit-content;
+    height: 20.65px;
+    text-align: center;
+    padding: 0 15px;
+    border: 0;
+    cursor: pointer;
+    color: #293264;
+    border: 1px solid #4D5B9E;
+    border-radius: 20px;
+    background-color: #D6DBF5;
+}
+
+.main{
+    margin: 40px 75px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.question-and-answer{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0;
+}
+
+.options{
+    display: flex;
+    justify-content: flex-start;
+    gap: 70px;
+}
+
+.submit{
+    border: 0;
+    width: 120px;
+    height: 35px;
     margin-left: auto;
     margin-right: auto;
-}
-
-.online{
-    font-family: 'Poppins';
-    font-size: 36px;
-    color: #000000;
-    text-align: left;
-    margin-bottom: 0;
-}
-
-.para{
-    color: #222222;
-    text-align: left;
-    width: 320px;
-}
-
-.card{
-    padding-left: 20px;
-    position: relative;
-}
-.card--katie{
-    width: 176px;
-    height: 235px;
     border-radius: 10px;
+    background-color: #4D5B9E;
+    color: white;
+    cursor: pointer;
 }
 
-.card--soldout{
-    position: absolute;
-    border-radius: 2px;
-    padding: 2px;
-    font-size: 0.7rem;
-    background-color: #FFFFFF;
-    text-transform: uppercase;
-    top: 1px;
-    left: 5%;
+.questions--linebreak{
+    width: 100%;
+    margin: 15px;
+    border: 0.794239px solid #DBDEF0
 }
 
-.star--logo{
+.bottom-content{
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
     align-items: center;
-    margin-left: 2px;
-    margin-top: 5px;
+    font-family: sans-serif;
+    height: 35px;
+    gap: 10px;
 }
 
-.star--logo>i{
-    color: red;
-    margin-right: 2px;
+.score{
+    color: #293264;
+    margin: 0;
 }
 
-.card--lessons{
-    font-size: 0.7rem;
-}
-.card--price{
-    font-size: 0.8rem;
+.retake-quiz{
+    border: 0;
+    width: 120px;
+    height: 35px;
+    border-radius: 10px;
+    background-color: #4D5B9E;
+    color: white;
+    cursor: pointer;
 }
