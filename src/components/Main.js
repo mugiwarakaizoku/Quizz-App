@@ -14,11 +14,17 @@ export default function Questions(props){
             arr[j] = temp;
         }
     }
-    //https://opentdb.com/api.php?amount=5&category=31&difficulty=medium&type=multiple
-    //https://opentdb.com/api.php?amount=3&type=multiple
 
     React.useEffect(()=>{
-        fetch("https://opentdb.com/api.php?amount=3&category=31&difficulty=easy&type=multiple")
+        let api = `https://opentdb.com/api.php?amount=${props.selection.amount}`
+        for(let prop in props.selection){
+            if(prop!='amount' && props.selection[prop]){
+                api = api+`&${prop}=${props.selection[prop]}`
+            }
+        }
+
+        console.log('api',api)
+        fetch(api)
         .then(res=> res.json())
         .then(res=>res.results)
         .then(data=>setQuizData(()=>data.map((obj)=>{
@@ -50,7 +56,6 @@ export default function Questions(props){
         setQuizSubmit(false)
 
     },[props.playAgain]);
-    console.log(quizData)
 
     function handleOptionClick(quesIdx,optionIdx){
         setQuizData(prevData => prevData.map((data,qidx)=>{
@@ -96,7 +101,6 @@ export default function Questions(props){
             }
         }
     }
-
 
     const submit = <button className="submit"
                             onClick={handleSubmit}>

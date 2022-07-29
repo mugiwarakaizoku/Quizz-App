@@ -1,5 +1,4 @@
 import React from "react"
-// import "../styles.css"
 
 export default function Options(props){
     
@@ -22,7 +21,6 @@ export default function Options(props){
             </button>
         )
     })
-//94D7A2=>green, F8BCBC => pink, D6DBF5=> violet
 
     return(
         <div className="options">
