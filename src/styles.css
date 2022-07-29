@@ -8,20 +8,17 @@ html{
 
 body{
     margin: 0;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .app{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
 .intro{
-    margin: 0;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -46,12 +43,33 @@ body{
     cursor: pointer;
 }
 
+.main{
+    padding: 30px 50px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.question-and-answer{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0;
+}
+
 .question{
     font-family: sans-serif;
     color: #293264;
     font-size: 1.4rem;
     font-weight: 600;
-    margin: 0;
+    margin-bottom: 30px;
+}
+
+.options{
+    display: flex;
+    justify-content: flex-start;
+    gap: 70px;
 }
 
 .option-button{
@@ -67,38 +85,11 @@ body{
     background-color: var(--buttonColor);
 }
 
-.clicked-option{
-    min-width:fit-content;
-    height: 20.65px;
-    text-align: center;
-    padding: 0 15px;
-    border: 0;
-    cursor: pointer;
-    color: #293264;
-    border: 1px solid #4D5B9E;
-    border-radius: 20px;
-    background-color: #D6DBF5;
-}
-
-.main{
-    margin: 40px 75px;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-
-.question-and-answer{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin: 0;
-}
-
-.options{
-    display: flex;
-    justify-content: flex-start;
-    gap: 70px;
+.questions--linebreak{
+    width: 100%;
+    margin: 15px 0;
+    border: 0.794239px solid #DBDEF0;
+    left: -10px;
 }
 
 .submit{
@@ -113,11 +104,6 @@ body{
     cursor: pointer;
 }
 
-.questions--linebreak{
-    width: 100%;
-    margin: 15px;
-    border: 0.794239px solid #DBDEF0
-}
 
 .bottom-content{
     margin-left: auto;
