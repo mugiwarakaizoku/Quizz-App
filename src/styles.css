@@ -46,7 +46,6 @@ body{
     text-align: center;
     color: #0b24df;
     font-size: 1.2rem;
-    /* align-items: center; */
     gap: 1rem;
 }
 
@@ -55,6 +54,11 @@ body{
     border-radius: 10px;
     border: 2px solid #031163;
     color: #031163;
+}
+
+.amount-warning{
+    font-size: 0.8rem;
+    color: rgb(2, 1, 1);
 }
 
 .quiz-sub > select{

@@ -23,7 +23,6 @@ export default function Questions(props){
             }
         }
 
-        console.log('api',api)
         fetch(api)
         .then(res=> res.json())
         .then(res=>res.results)

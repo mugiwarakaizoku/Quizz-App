@@ -14,6 +14,11 @@ export default function Intro(props){
                             value = {props.selection.amount}
                             onChange={props.handleChange}
                             ></input>
+                    {(props.selection.amount && props.selection.amount<1 || props.selection.amount>50) && 
+                                                <div className="amount-warning">
+                                                    only numbers from 1 to 50 allowed
+                                                </div>
+                                                }
                 </div>
                 <div className="quiz-sub">
                     <label htmlFor='category'>Category</label>
